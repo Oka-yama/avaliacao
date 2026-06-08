@@ -1,4 +1,21 @@
-head {
+.header {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    color: #498fcc;
+    background-color: #000;
+}
+#navbar {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
     color: #000;
+    background-color: #498fcc;
+}
+#footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    color: #000;
+    background-color: #498fcc;
+    font-weight: bold;
+}
+#t-c {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
 }
