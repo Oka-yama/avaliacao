@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+  Synapse Tech | Produtos
+{% endblock %}
+
+{% block content %}
+  <section id="t-c">
+    <h1>Produtos disponíveis</h1>
+
+    <p>Nesta página serão exibidos os produtos cadastrados em nossa loja</p>
+  </section>
+  <section class="produtos-grid">
+    {% for produto in produtos %}
+      <article class="card" style="background-color: #2f4f4f; color: #000; margin: 10px;">
+        {% if produto.imagem %}
+          <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}" style="width:25%; height:25%; object-fit: cover; border-radius: 8px; margin: 10px;" />
+        {% else %}
+          <div>Sem imagem</div>
+        {% endif %}
+        <h2>{{ produto.nome }}</h2>
+        <p>{{ produto.descricao }}</p>
+      </article>
+    {% empty %}
+    <article class="card">
+        <h2>Nenhum produto disponível</h2>
+        <p>Não existe nenhum produto cadastrado para exibição</p>
+    </article>
+    {% endfor %}
+  </section>
+{% endblock %}
