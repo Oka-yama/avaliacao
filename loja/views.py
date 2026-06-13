@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Produto
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def inicio(request):
@@ -13,7 +14,11 @@ def produtos(request):
     contexto = {
         'produtos': lista_produtos
     }
-    return render(request, 'app/produto.html', contexto)
+    return render(request, 'app/produtos.html', contexto)
 
 def contato(request):
     return render(request, 'app/contato.html')
+
+@login_required
+def painel_interno(request):
+    return render(request, 'app/painel_interno.html')

@@ -1,0 +1,13 @@
+{% extends "app/base.html" %}
+
+{% block title %}Login{% endblock %}
+{% block content %}
+<p style="text-align: center;">
+    Faça login para acessar o painel interno da loja
+</p>
+
+<form method="post" style="text-align: center;">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Entrar</button>
+</form>
+{% endblock %}

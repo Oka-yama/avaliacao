@@ -1,0 +1,14 @@
+{% extends "app/base.html" %}
+
+{% block title %}Painel Interno{% endblock %}
+{% block content %}
+    <section style="text-align: center;">
+        <h1>Painel Interno</h1>
+        <p>Bem-vindo ao painel interno da loja! Aqui você pode gerenciar seus produtos, pedidos e outras configurações</p>
+
+        <p>
+        Está página só pode ser acessada por usuários autenticados.
+        </p>
+        <p>Usuário logado: {{ request.user.name }}</p>
+        </section>
+{% endblock %}
